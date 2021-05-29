@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/countries-rolodex/static/css/main.3e085781.chunk.css",
+    "main.js": "/countries-rolodex/static/js/main.9b336071.chunk.js",
+    "main.js.map": "/countries-rolodex/static/js/main.9b336071.chunk.js.map",
+    "runtime-main.js": "/countries-rolodex/static/js/runtime-main.8a9c2b40.js",
+    "runtime-main.js.map": "/countries-rolodex/static/js/runtime-main.8a9c2b40.js.map",
+    "static/js/2.818e5a6b.chunk.js": "/countries-rolodex/static/js/2.818e5a6b.chunk.js",
+    "static/js/2.818e5a6b.chunk.js.map": "/countries-rolodex/static/js/2.818e5a6b.chunk.js.map",
+    "static/js/3.ad555ead.chunk.js": "/countries-rolodex/static/js/3.ad555ead.chunk.js",
+    "static/js/3.ad555ead.chunk.js.map": "/countries-rolodex/static/js/3.ad555ead.chunk.js.map",
+    "index.html": "/countries-rolodex/index.html",
+    "static/css/main.3e085781.chunk.css.map": "/countries-rolodex/static/css/main.3e085781.chunk.css.map",
+    "static/js/2.818e5a6b.chunk.js.LICENSE.txt": "/countries-rolodex/static/js/2.818e5a6b.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.8a9c2b40.js",
+    "static/js/2.818e5a6b.chunk.js",
+    "static/css/main.3e085781.chunk.css",
+    "static/js/main.9b336071.chunk.js"
+  ]
+}
