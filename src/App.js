@@ -1,25 +1,47 @@
-import logo from './logo.svg';
+import React, { Component } from 'react';
 import './App.css';
+import { CardList } from './components/card-list/CardList';
+import { SearchBox } from './components/search-box/SearchBox';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      countries: [],
+      searchField: '',
+    };
+  }
+  async fetchCountries() {
+    const res = await fetch('https://restcountries.eu/rest/v2/all');
+    const data = await res.json();
+    this.setState({ countries: data });
+  }
+  componentDidMount() {
+    this.fetchCountries();
+  }
+  handleChange = (evt) => {
+    this.setState({ searchField: evt.target.value });
+  };
+  render() {
+    const { countries, searchField } = this.state;
+    let filteredCountries = [];
+    if (countries) {
+      filteredCountries = countries.filter((country) =>
+        country.name.toLowerCase().includes(searchField.toLowerCase())
+      );
+    }
+
+    return (
+      <div className="App">
+        <h1>Countries Rolodex</h1>
+        <SearchBox
+          placeholder="Search Countries"
+          handleChange={this.handleChange}
+        />
+        <CardList countries={filteredCountries} />
+      </div>
+    );
+  }
 }
 
 export default App;
